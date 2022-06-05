@@ -34,3 +34,13 @@ function mergeArr(arr1, arr2) {
 /**
  * 实现 二叉树的深度优先遍历
  */
+
+function deepTraversal(node) {
+    let nodes = [];
+    if (node === null) return nodes;
+    let childrens = node.children;
+    for (let i = 0; i < childrens.length; i++) {
+        deepTraversal(nodes[i]);
+    }
+    return nodes;
+}
